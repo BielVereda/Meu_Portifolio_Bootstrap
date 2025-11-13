@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfólio - Biel Vereda</title>
+  <link rel="icon" href="https://via.placeholder.com/32" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/assets/styles/style.css">
+
+  <link rel="icon" href="./src/assets/images/icons/logo-site.png" type="image/png">
+  <link rel="shortcut icon" href="./src/assets/images/icons/logo-site.png" type="image/png">
+
+</head>
+
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./src/assets/images/icons/logo.png" alt="Logo Biel Vereda" height="40">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item mx-0">
+            <a class="nav-link d-flex align-items-center" href="#hero">
+              <img src="./src/assets/images/icons/casa.png" alt="Início" class="nav-icon">
+              <span>Início</span>
+            </a>
+          </li>
+          <li class="nav-item mx-0">
+            <a class="nav-link d-flex align-items-center" href="#projetos">
+              <img src="./src/assets/images/icons/sobre.png" alt="Sobre Mim" class="nav-icon">
+              <span>Sobre mim</span>
+            </a>
+          </li>
+          <li class="nav-item mx-0">
+            <a class="nav-link d-flex align-items-center" href="#projetos">
+              <img src="./src/assets/images/icons/caderno.png" alt="Projetos" class="nav-icon">
+              <span>Projetos</span>
+            </a>
+          </li>
+          <li class="nav-item mx-0">
+            <a class="nav-link d-flex align-items-center" href="#contato">
+              <img src="./src/assets/images/icons/telefone.png" alt="Contato" class="nav-icon">
+              <span>Contato</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero text-center">
+    <img src="./src/assets/images/GabrielVereda.jpg" alt="Foto do Biel Vereda" class="rounded-circle mb-3" width="180"
+      height="180">
+    <h1 class="fw-bold">Biel Vereda</h1>
+    <p class="lead">Desenvolvedor Back-end e Front-end</p>
+
+    <div class="d-flex justify-content-center gap-3 mt-3" id="logos">
+      <a href="https://github.com/BielVereda" target="_blank" aria-label="GitHub">
+        <img src="./src/assets/images/icons/github.png" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/gabriel-vereda/" target="_blank" aria-label="LinkedIn">
+        <img src="./src/assets/images/icons/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE MIM ===== -->
+  <!-- ===== SOBRE MIM ===== -->
+  <section id="sobre" class="sobre container py-5">
+    <h2 class="text-center mb-4">Sobre Mim</h2>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-8 text-center">
+        <p class="lead">
+          Fala aí, Sou o <strong>Biel Vereda</strong> — o cara que passa mais tempo entre linhas de código
+          do que longe da tela. Curioso por natureza, sempre gostei de entender como as coisas funcionam,
+          e foi assim que acabei me apaixonando pela programação.
+        </p>
+        <p>
+          Hoje eu trabalho com <strong>Front-end</strong> e <strong>Back-end</strong>, criando projetos que vão
+          desde sites simples até sistemas completos. Gosto de deixar tudo com uma pegada moderna, fluida
+          e com aquele toque pessoal — nada de design genérico.
+        </p>
+        <p>
+          No futuro, quero continuar evoluindo como <strong>Full Stack</strong> e entrar em projetos grandes,
+          onde eu possa aprender ainda mais e mostrar que código bem feito também pode ter estilo 😎.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===== PROJETOS ===== -->
+  <section id="projetos" class="container py-5">
+    <h2 class="text-center mb-4">Meus Projetos</h2>
+
+    <div id="carouselProjetos" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4500">
+      <div class="carousel-inner">
+
+        <!-- Projeto 1 -->
+        <div class="carousel-item active">
+          <div class="card shadow-sm mx-auto" style="max-width: 22rem;">
+            <div class="dropdown mt-1 ms-1">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownProjeto1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Saiba mais
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownProjeto1">
+                <li>
+                  <span class="dropdown-item-text">
+                    O Game Station é um site onde eu disponibilizo jogos clássicos de consoles antigos — GBA, GBC, PS1,
+                    PSP, Nintendo DS e 3DS — tudo de forma gratuita, com os arquivos hospedados no Google Drive.</span>
+                  <span class="dropdown-item-text">
+                    A ideia era criar um refúgio pra quem ama os games retrô e quer reviver aquela vibe raiz utilizando
+                    vários emuladores diferentes.</span>
+                  <span class="dropdown-item-text">
+                    O layout é limpo, direto ao ponto e com aquele toque de nostalgia que só quem cresceu jogando
+                    Pokémon FireRed entende.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card-img-wrapper">
+              <img src="./src/assets/images/projects/GameStation.svg" class="card-img-top" alt="Projeto Game Station">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Game Station</h5>
+              <p class="card-text">Site com jogos retrô para download — O melhor projeto do universo gamer.</p>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="https://gamestationvereda.vercel.app/" class="btn btn-primary" target="_blank">
+                  Ver projeto <img src="./src/assets/images/icons/seta.png" alt="Seta" width="18" height="18">
+                </a>
+                <a href="https://github.com/BielVereda/Game_Station.git" class="btn btn-github" target="_blank">
+                  GitHub <img src="./src/assets/images/icons/github.png" alt="GitHub" width="18" height="18">
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="carousel-item">
+          <div class="card shadow-sm mx-auto" style="max-width: 22rem;">
+            <div class="dropdown mt-1 ms-1">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownProjeto1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Saiba mais
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownProjeto1">
+                <li>
+                  <span class="dropdown-item-text">
+                    Esse projeto nasceu dentro do SENAI, mas o bagulho ficou tão bonito que dava pra lançar no mercado
+                    fácil.</span>
+                  <span class="dropdown-item-text">
+                    O DataCenter SENAI é um site completo que reúne informações, ferramentas e conteúdos criados pros
+                    alunos e professores.</span>
+                  <span class="dropdown-item-text">
+                    Eu e minha equipe fizemos questão de deixar o visual moderno, leve e responsivo — cada detalhe do
+                    design foi pensado
+                    para manter o padrão SENAI de qualidade.</span>
+                  <span class="dropdown-item-text">
+                    É um dos meus projetos mais bem estruturados em HTML, CSS e JS — um verdadeiro modelo de organização
+                    e design.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-img-wrapper">
+              <img src="./src/assets/images/projects/SENAI.svg" class="card-img-top" alt="Projeto DataCenter SENAI">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">DataCenter SENAI</h5>
+              <p class="card-text">Painel web moderno baseado em HTML, CSS e JS — Estilo SENAI.</p>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="https://data-center-senai.vercel.app/" class="btn btn-primary" target="_blank">
+                  Ver projeto <img src="./src/assets/images/icons/seta.png" alt="Seta" width="18" height="18">
+                </a>
+                <a href="https://github.com/BielVereda/DataCenter_SENAI.git" class="btn btn-github" target="_blank">
+                  GitHub <img src="./src/assets/images/icons/github.png" alt="GitHub" width="18" height="18">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="carousel-item">
+          <div class="card shadow-sm mx-auto" style="max-width: 22rem;">
+            <div class="dropdown mt-1 ms-1">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownProjeto1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Saiba mais
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownProjeto1">
+                <li>
+                  <span class="dropdown-item-text">
+                    O Portal de Denúncia é uma plataforma que permite que pessoas façam denúncias de forma segura, com
+                    anonimato e facilidade.</span>
+                  <span class="dropdown-item-text">
+                    A ideia principal é ajudar quem precisa falar, mas tem medo de se expor — tudo com uma interface
+                    simples e objetiva.</span>
+                  <span class="dropdown-item-text">
+                    O design foi pensado pra transmitir confiança e seriedade, mas sem deixar de ser moderno.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="card-img-wrapper">
+              <img src="./src/assets/images/projects/DenunciaAnonima.png" class="card-img-top"
+                alt="Projeto Portal de Denúncia">
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Portal de Denúncia</h5>
+              <p class="card-text">Sistema web para denúncias anônimas — Segurança e cidadania juntas.</p>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="https://site-denuncia-safe-speak.vercel.app/" class="btn btn-primary" target="_blank">
+                  Ver projeto <img src="./src/assets/images/icons/seta.png" alt="Seta" width="18" height="18">
+                </a>
+                <a href="https://github.com/BielVereda/Site_Denuncia.git" class="btn btn-github" target="_blank">
+                  GitHub <img src="./src/assets/images/icons/github.png" alt="GitHub" width="18" height="18">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjetos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselProjetos" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contato" class="bg-dark text-light text-center py-3">
+    <p>Feito por Biel Vereda | © 2025 | <a href="#" class="text-light text-decoration-underline">Sobre o Projeto</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./src/assets/js/rolagem_suave.js"></script>
+</body>
+
+</html>

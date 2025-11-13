@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: none;
 }
 
 body {
@@ -12,76 +13,80 @@ body {
   scroll-behavior: smooth;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 /* ===== NAVBAR ===== */
 .navbar {
   background-color: #1a1a1a;
   padding: 10px 0;
-  margin: 0;
+  margin-right: 0;
   opacity: 0.7;
   z-index: 9;
 }
 
+/* Logo */
 .navbar-brand img {
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
   opacity: 1;
   z-index: 10;
 }
 
-navbar-brand img:hover {
+.navbar-brand img:hover {
   transform: scale(1.05);
   opacity: 1;
 }
 
+/* Itens do menu */
 .navbar-nav {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
   opacity: 1;
   z-index: 10;
 }
 
-.navbar-nav img {
-  margin-right: 10px;
-}
-
-.nav-item {
-  position: relative;
-}
-
-.nav-link {
-  display: flex;
-  align-items: center;
-  color: white !important;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #0d6efd !important;
-}
-
+/* Ícones da navbar */
 .nav-icon {
   width: 32px;
   height: 32px;
   filter: invert(0.7);
-  transition: transform 0.3s ease;
+  transition: filter 0.3s ease;
+  flex-shrink: 0;
 }
 
-.nav-item:hover .nav-icon {
-  transform: scale(1.1);
+/* Ícone no hover */
+.nav-link:hover .nav-icon {
   filter: invert(0);
 }
 
-.nav-item span {
+/* Link base */
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: white !important;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  gap: 8px;
+}
+
+/* Efeito de luz no hover */
+.nav-link:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Texto do link */
+.nav-link span {
   color: white;
   font-size: 1rem;
-  margin-left: 8px;
   opacity: 0;
-  transform: translateX(-6px);
+  transform: translateX(-8px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   white-space: nowrap;
 }
 
-.nav-item:hover span {
+/* Texto aparece suave */
+.nav-link:hover span {
   opacity: 1;
   transform: translateX(0);
 }
@@ -125,6 +130,31 @@ navbar-brand img:hover {
   margin-bottom: 20px;
 }
 
+/* ===== SOBRE MIM ===== */
+.sobre {
+  text-align: center;
+  color: #212529;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f8f9fa 100%
+  );
+  border-top: 2px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.sobre h2 {
+  font-weight: bold;
+  color: #a31c1c;
+}
+
+.sobre p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #333;
+}
+
 #logos img {
   width: 40px !important;
   height: 40px !important;
@@ -143,7 +173,7 @@ navbar-brand img:hover {
 
 .carousel.carousel-fade .carousel-item {
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.3s ease;
 }
 
 .carousel.carousel-fade .carousel-item.active {
@@ -173,7 +203,6 @@ navbar-brand img:hover {
 }
 
 .card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -197,6 +226,21 @@ navbar-brand img:hover {
   display: block;
 }
 
+.dropdown-item-text{
+  display: inline-block;
+  text-align: justify;
+}
+
+.dropdown-item-text::first-letter {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #e30613;
+  float: left;
+  line-height: 1;
+  padding-right: 8px;
+  font-family: "Georgia", serif;
+}
+
 /* ===== BOTÕES ===== */
 .btn img {
   margin-left: 3px;
@@ -205,12 +249,7 @@ navbar-brand img:hover {
 }
 
 .btn {
-  transition: transform 1s ease, background 1s ease;
-  background: #ff0000;
-}
-
-.btn:hover {
-  transform: scale(1.1);
+  transition: transform 0.3s ease;
   background: #b02c2c;
   background: linear-gradient(
     90deg,
@@ -218,22 +257,51 @@ navbar-brand img:hover {
     rgba(209, 27, 27, 1) 32%,
     rgba(255, 0, 0, 1) 100%
   );
+  border: none;
+}
+
+.btn:hover {
+  transform: scale(1.1);
 }
 
 .btn-github {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  border: none !important;
-}
-
-.btn-github:hover {
   background: #7a7474;
   background: linear-gradient(
     90deg,
     rgba(122, 116, 116, 1) 0%,
     rgba(66, 54, 54, 1) 31%,
     rgba(0, 0, 0, 1) 100%
-  );
+  ) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+/* Força o botão do dropdown a manter o gradiente */
+.btn.btn-secondary.dropdown-toggle {
+  background: linear-gradient(
+    90deg,
+    rgba(176, 44, 44, 1) 0%,
+    rgba(209, 27, 27, 1) 32%,
+    rgba(255, 0, 0, 1) 100%
+  ) !important;
+  border: none !important;
+  color: #fff !important;
+  transition: transform 0.3s ease;
+}
+
+/* Mantém a cor mesmo no hover, focus e active */
+.btn.btn-secondary.dropdown-toggle:hover,
+.btn.btn-secondary.dropdown-toggle:focus,
+.btn.btn-secondary.dropdown-toggle:active,
+.show > .btn.btn-secondary.dropdown-toggle {
+  background: linear-gradient(
+    90deg,
+    rgba(176, 44, 44, 1) 0%,
+    rgba(209, 27, 27, 1) 32%,
+    rgba(255, 0, 0, 1) 100%
+  ) !important;
+  color: #fff !important;
+  transform: scale(1.05);
 }
 
 /* ===== FOOTER ===== */

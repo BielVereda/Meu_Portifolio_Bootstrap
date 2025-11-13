@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/src/assets/pages/index.html"
+      "destination": "/Portifolio_Bootstrap/src/pages/index.html"
     }
   ]
 }

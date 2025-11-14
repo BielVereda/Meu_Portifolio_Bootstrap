@@ -2,32 +2,36 @@
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', e => {
     const targetId = link.getAttribute('href');
+
     if (targetId.startsWith('#')) {
       e.preventDefault();
+
       const target = document.querySelector(targetId);
       if (!target) return;
 
       const navbarHeight = document.querySelector('.navbar').offsetHeight;
-      const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
-      const startPosition = window.scrollY;
-      const distance = targetPosition - startPosition;
-      const duration = 900;
-      let start = null;
 
-      // Função de suavização (easeInOutCubic)
-      function animation(currentTime) {
-        if (!start) start = currentTime;
-        const progress = currentTime - start;
-        const t = Math.min(progress / duration, 1);
-        const ease = t < 0.5
-          ? 4 * t * t * t
-          : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      const targetOffset = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
 
-        window.scrollTo(0, startPosition + distance * ease);
-        if (progress < duration) requestAnimationFrame(animation);
+      const start = window.scrollY;
+      const distance = targetOffset - start;
+      const duration = 700;
+      const startTime = performance.now();
+
+      // Easing suave que começa *imediatamente*
+      const easeOutQuad = t => t * (2 - t);
+
+      function animate(time) {
+        const elapsed = time - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeOutQuad(progress);
+
+        window.scrollTo(0, start + distance * eased);
+
+        if (progress < 1) requestAnimationFrame(animate);
       }
 
-      requestAnimationFrame(animation);
+      requestAnimationFrame(animate);
     }
   });
 });

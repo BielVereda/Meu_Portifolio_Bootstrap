@@ -13,7 +13,7 @@ body {
   scroll-behavior: smooth;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -134,11 +134,7 @@ html{
 .sobre {
   text-align: center;
   color: #212529;
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #f8f9fa 100%
-  );
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
   border-top: 2px solid rgba(0, 0, 0, 0.05);
   border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 }
@@ -226,7 +222,7 @@ html{
   display: block;
 }
 
-.dropdown-item-text{
+.dropdown-item-text {
   display: inline-block;
   text-align: justify;
 }
@@ -239,6 +235,14 @@ html{
   line-height: 1;
   padding-right: 8px;
   font-family: "Georgia", serif;
+}
+
+#dropdownProjeto1.show::after {
+  transform: rotate(180deg);
+}
+
+#dropdownProjeto1::after {
+  transition: transform 0.3s ease;
 }
 
 /* ===== BOTÕES ===== */

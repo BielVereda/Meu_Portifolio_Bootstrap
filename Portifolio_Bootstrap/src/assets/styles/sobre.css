@@ -1,0 +1,15 @@
+@import url("./sobre-projeto.css");
+
+.container .card h2 {
+  color: #a31c1c;
+}
+
+.container .card p::first-letter {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #e30613;
+  float: left;
+  line-height: 1;
+  padding-right: 8px;
+  font-family: "Georgia", serif;
+}
